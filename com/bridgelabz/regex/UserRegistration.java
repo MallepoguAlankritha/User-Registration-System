@@ -36,4 +36,21 @@ public class UserRegistration {
         else
             System.out.println("Last name is Invalid");
     }
+    /*
+    Created a method to validate Email Address
+     */
+    public static void validEmailId(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the Email Address : ");
+        String email = scanner.next();
+        String regex2 = "^[a-zA-Z]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
+        Pattern p2 = Pattern.compile(regex2);
+        Matcher m2 = p2.matcher(email);
+        boolean r2 = m2.matches();
+        if (r2)
+            System.out.println("Email Address is Valid");
+        else
+            System.out.println("Email Address is Invalid");
+    }
+
 }
