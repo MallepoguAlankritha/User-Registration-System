@@ -18,6 +18,7 @@ public class UserRegistrationMain {
         System.out.println("Enter 5 : to validate Password Rule 1 ");
         System.out.println("Enter 6 : to validate Password Rule 2 ");
         System.out.println("Enter 7 : to validate Password Rule 3 ");
+        System.out.println("Enter 8 : to validate Password Rule 4 ");
         switch (scanner.nextInt()){
             case 1:
                 UserRegistration.validFirstName();
@@ -40,8 +41,11 @@ public class UserRegistrationMain {
             case 7:
                 UserRegistration.validPassRule3();
                 break;
+            case 8:
+                UserRegistration.validPassRule4();
+                break;
             default:
-                System.out.println("Select a valid number");
+                System.out.println("Invalid! Select a valid number");
         }
     }
 }
